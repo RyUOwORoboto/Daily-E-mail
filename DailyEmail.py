@@ -59,7 +59,7 @@ def send_email():
 # Schedule the task
 schedule.every().day.at("09:00").do(send_email)  # Schedule for 9 AM every day
 
-# # Main loop to keep the script running and checking for the scheduled task
-# while True:
-#     schedule.run_pending()
-#     time.sleep(60)  # Check every minute
+# Main loop to keep the script running and checking for the scheduled task
+while True:
+    schedule.run_pending()
+    time.sleep(60)  # Check every minute
